@@ -1,14 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public Transform m_Target = null;
-    float m_Speed = 3f;
-    private void Start()
+    float m_Speed = 4f;
+    public void Initailize(Transform target)
     {
-        transform.LookAt(m_Target);
+        transform.LookAt(target);
+        Destroy(gameObject, 10);
     }
     private void Update()
     {
